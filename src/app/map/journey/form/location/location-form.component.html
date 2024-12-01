@@ -1,0 +1,16 @@
+<div [formGroup]="parentForm()!" class="location-group">
+  <div [formGroupName]="groupName()!">
+    <h4>{{ title() }}</h4>
+    <mat-form-field appearance="outline">
+      <input matInput formControlName="street" placeholder="Enter street">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <input matInput formControlName="number" placeholder="Enter number">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <input matInput formControlName="city" placeholder="Enter city">
+    </mat-form-field>
+  </div>
+</div>

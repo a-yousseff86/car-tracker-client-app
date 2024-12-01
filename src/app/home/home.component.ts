@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import {TranslateDirective} from '../shared/langauge/translate.directive';
+import {MapComponent} from '../map/map.component';
 
 @Component({
   selector: 'app-home',
   imports: [
-    TranslateDirective
+    TranslateDirective,
+    MapComponent
   ],
   templateUrl: './home.component.html',
   standalone: true,

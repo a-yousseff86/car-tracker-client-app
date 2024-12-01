@@ -1,0 +1,27 @@
+<form [formGroup]="journeyForm" (ngSubmit)="onSubmit()" class="journey-form">
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Select Car</mat-label>
+    <mat-select formControlName="selectedCar">
+      @for (car of cars(); track car.id) {
+        <mat-option [value]="car.id">{{ car.name }} {{ car.model }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+ <div class="location">
+  <app-location-form
+    [parentForm]="journeyForm"
+    groupName="fromLocation"
+    title="From Location">
+  </app-location-form>
+
+  <app-location-form
+    [parentForm]="journeyForm"
+    groupName="toLocation"
+    title="To Location">
+  </app-location-form>
+ </div>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!journeyForm.valid">
+    Submit
+  </button>
+</form>

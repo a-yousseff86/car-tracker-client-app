@@ -1,0 +1,15 @@
+.map-wrapper {
+  display: grid;
+  width: 100vw;
+  grid-template-columns: repeat(30,  1fr);
+  .form {
+    padding: 1rem;
+    grid-column: 1 / 10;
+  }
+  .map {
+    grid-column: 10 /  31;
+    #map {
+      height: 90vh;
+    }
+  }
+}
