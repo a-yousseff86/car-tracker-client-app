@@ -5,19 +5,12 @@
 
 body {
   @include font(var(--body-font-family), 400);
-  color: var(--red-color);
   font-optical-sizing: var(--body-font-optical-sizing);
   font-size: var(--body-font-optical-sizing);
 }
 
-a {
-  font-weight: 700;
-  font-size: 1em;
-  color: #000;
-  &:hover {
-    color: var(--red-color);
-  }
-  & .active {
-    color: var(--red-color);
-  }
+.mat-icon {
+  font-size: 40px;
+  width: 40px !important;
+  height: 40px !important;
 }

@@ -23,5 +23,12 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "references": [
+    {
+      "path": "tsconfig.spec.json"
+    }
+  ],
+  "include": ["src/**/*.d.ts", "src/**/*.ts"],
+  "exclude": ["node_modules", "src/test/javascript/cypress/tsconfig.json"]
 }
